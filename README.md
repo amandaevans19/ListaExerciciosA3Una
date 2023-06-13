@@ -1,2 +1,2 @@
 # ListaExerciciosA3Una
-Programação de Soluções Computacionais
+Matéria de Programação de Soluções Computacionais
