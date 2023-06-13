@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+public static void main(String[] args) {       
+Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Informe a altura da parede (hp): ");
+        
+       
+int hp = scanner.nextInt();
+
+        System.out.print(
+
+"Informe a largura da parede (lp): ");
+        int lp = scanner.nextInt();
+
+        System.out.print("Informe a altura do azulejo (ha): ");
+        
+       
+int ha = scanner.nextInt();
+
+        System.out.print("Informe a largura do azulejo (la): ");
+        
+       
+int la = scanner.nextInt();
+
+int quantidadeAzulejos = (hp / ha) * (lp / la);
+
+        System.out.println("Quantidade de azulejos necessários: " + quantidadeAzulejos);
+
+        scanner.close();
+    }
+}
