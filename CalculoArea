@@ -31,3 +31,4 @@ int quantidadeAzulejos = (hp / ha) * (lp / la);
         scanner.close();
     }
 }
+
