@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o nome do aluno: ");
+        String nomeAluno = scanner.nextLine();
+        
+      int quantidadeNotas = 5;
+        double somaNotas = 0;
+
+        for (int i = 1; i <= quantidadeNotas; i++) {
+            System.out.print("Digite a nota " + i + ": ");
+            double nota = scanner.nextDouble();
+            somaNotas += nota;
+           
+double media = somaNotas / quantidadeNotas;
+
+        System.out.println("Média do aluno: " + media);
+
+        if (media >= 60) {
+            System.out.println(nomeAluno + " foi aprovado!");
+        } else if (media < 40) {
+            System.out.println(nomeAluno + " foi reprovado!");
+        } else {
+            System.out.println(nomeAluno + " está em recuperação.");
+        }
+    }
+ }
+} 
