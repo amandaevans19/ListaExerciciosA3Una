@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Informe o tamanho das matrizes quadradas: ");
+        int tamanho = input.nextInt();
+
+        int[][] matriz1 = new int[tamanho][tamanho];
+        int[][] matriz2 = new int[tamanho][tamanho];
+
+       System.out.println("Preencha a primeira matriz:");
+        preencherMatriz(matriz1, input);
+
+        System.out.println("Preencha a segunda matriz:");
+        preencherMatriz(matriz2, input);
+
+        int[][] matrizSoma = somarMatrizes(matriz1, matriz2);
+
+        System.out.println("Matriz resultante da soma:");
+        exibirMatriz(matrizSoma);
+    }
+
+   public static void preencherMatriz(int[][] matriz, Scanner input) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print("Informe o valor para a posição [" + i + "][" + j + "]: ");
+                matriz[i][j] = input.nextInt();
+            }
+        }
+    }
+
+    public static int[][] somarMatrizes(int[][] matriz1, int[][] matriz2) {
+        int tamanho = matriz1.length;
+        int[][] matrizSoma = new int[tamanho][tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            for (int j = 0; j < tamanho; j++) {
+                matrizSoma[i][j] = matriz1[i][j] + matriz2[i][j];
+            }
+        }
+
+        return matrizSoma;
+    }
+
+    public static void exibirMatriz(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
